@@ -1,0 +1,704 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace,sans-serif;
+}
+
+canvas {  
+ background-color: lightblue;
+ box-shadow: inset 5px 5px 150px 50px rgb(0, 0, 0); 
+ display: block;
+}
+
+#game {
+  display: none;
+  animation: example 2s;
+  align-items: center;
+  justify-content: center;     
+}
+
+/* ინტრო სქრინი და ბურთების სინქრონიზაცია თავისი მოძრაობებით */
+
+ #splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background:black;
+  z-index: 200;
+  color: white;
+  text-align: center;
+  line-height: 20vh;
+  font-style: italic;
+  letter-spacing: 5px;
+}
+#hide {
+  opacity: 1;
+}
+
+
+
+#introball1 {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to top, #e65c00, #f9d423); 
+  border-radius: 100%;
+  animation: modzraoba 3s;  
+}
+
+#introball2{
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  animation: modzraoba 3s;
+  animation-direction: reverse;
+}
+
+
+#introball3 {
+  position: absolute;
+  bottom:0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: green;
+  border-radius: 100%;
+  animation: modzraoba2 3s;  
+}
+
+#introball4 {
+  position: absolute;
+  bottom:0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: green;
+  border-radius: 100%;
+  animation: modzraoba2 3s; 
+  animation-direction: reverse;
+}
+
+#introball5 {
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: blue;
+  border-radius: 100%;
+  animation: modzraoba3 3.5s;
+}
+
+#introball6 {
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: blue;
+  border-radius: 100%;
+  animation: modzraoba3 3.5s;
+  animation-direction: reverse;
+}
+
+#introball7 {
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 100%;
+  animation : modzraoba4 3.5s;
+
+}
+
+#introball8 {
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 100%;
+  animation : modzraoba4 3.5s;
+  animation-direction: reverse;
+}
+
+@keyframes modzraoba {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:rgb(101, 214, 35); left:50%; top:0px;}
+  50%  {background-color:rgb(240, 122, 12); left:50%; top:50%;}
+  75%  {background-color:rgb(104, 17, 71); left:0px; top:30%;} /* opacity: 0; ჩავამატო რო გაქრეს*/
+  100% {background-color:rgb(17, 151, 118); left:0px; top:0px;}
+}
+
+@keyframes modzraoba2 {
+  0%   {background-color:rgb(223, 202, 19); right:0px; bottom:0px;}
+  25%  {background-color:rgb(74, 132, 143); right:50%; bottom:0px;}
+  50%  {background-color:rgb(248, 12, 3); right:50%; bottom:50%;}
+  75%  {background-color:green; right:0px; bottom:30%;} 
+  100% {background-color:rgb(230, 119, 15); right:0px; bottom:0px;}
+}
+
+@keyframes modzraoba3 {
+  0%   {background-color:red; left:0px; bottom:0px;}
+  25%  {background-color:rgb(80, 116, 23); left:50%; bottom:0px;}
+  50%  {background-color:rgb(15, 91, 231); left:50%; bottom:50%;}
+  75%  {background-color:rgb(121, 17, 206); left:0px; bottom:30%;} 
+  100% {background-color:rgb(226, 0, 113); left:0px; bottom:0px;}
+}
+
+
+@keyframes modzraoba4 {
+  0%   {background-color:rgb(11, 214, 163); right:0px; top:0px;}
+  25%  {background-color:yellow; right:50%; top:0px;}
+  50%  {background-color:blue; right:50%; top:50%;}
+  75%  {background-color:green; right:0px; top:30%;} 
+  100% {background-color:red; right:0px; top:0px;}
+}
+
+
+@keyframes widthin {
+  to{
+    width: 100%;
+    height: 100%;  
+  }
+} 
+
+#fade {
+  opacity: 0;
+  animation: fadeIn1 3.2s ease-in forwards;
+}
+#fade1{
+  opacity: 0;
+  animation: fadeIn 3.2s ease-in forwards;
+}
+
+#fade2{
+  opacity: 0;
+  animation: fadeIn2 3.2s ease-in forwards;
+}
+
+#fade3{
+  opacity: 0;
+  animation: fadeIn3 3.2s ease-in forwards;
+}
+
+
+@keyframes fadeIn {
+ 0%{color: white; opacity: 0;  font-size: 0px; }
+ 25% {color:red;opacity: 2;  font-size: 10px; }
+ 50% {color: green;opacity: 3;  font-size: 20px; transform: rotate(-3600deg);}       
+ 75% {color: blue; opacity: 4;  font-size: 30px;}
+ 100% {color: orange; opacity: 5;  font-size: 40px; text-decoration: overline underline red;/* height:350px; საინტერესოა*/}
+}
+
+@keyframes fadeIn1{
+  0%{color: white; opacity: 0;   font-size: 40px;}
+  25% {color:orange;opacity: 2; font-size: 30px;}
+  50% {color: red;opacity: 3;   font-size: 20px;}        
+  75% {color: green; opacity: 4;  font-size: 10px;}
+  100% {color: blue; opacity: 5;  font-size: 0px;}
+}
+
+
+@keyframes fadeIn2{
+  0%{color: white; opacity: 0;  letter-spacing: 0px;}
+  25% {color:blue;opacity: 2;  letter-spacing: 4px;}     
+  50% {color: orange;opacity: 3;  letter-spacing: 8px; transform: rotate(3600deg);}
+  75% {color: red; opacity: 4;  letter-spacing: 12px;}
+  100% {color: green; opacity: 5;  letter-spacing: 12px; text-decoration: overline underline blue; /*height: 50px; */}
+}
+
+
+@keyframes fadeIn3{
+  0%{color: white; opacity: 0;  letter-spacing: 16px;}
+  25% {color:green;opacity: 2;  letter-spacing: 12px;}
+  50% {color: blue;opacity: 3;  letter-spacing: 8px; }    
+  75% {color: orange; opacity: 4; letter-spacing: 4px;}
+  100% {color: red; opacity: 0; letter-spacing: 0px;}
+}
+
+
+
+@keyframes mymove {
+ 100% { transform: rotate(360deg);}
+}
+
+@keyframes outmove {
+  100% {transform: rotate(-360deg);}
+}
+
+
+/*შიდა მენიუს სროლა ქულა და წარწერები */
+#shoot{
+  position: absolute;
+  margin-top: 2vh;
+  border-radius: 50px;
+  border: 2px solid white;
+
+  /*margin-left: 57%; */
+  right: 2%;
+  display: none;
+  font-size: 20px;
+  letter-spacing: 5px;
+  opacity: 1;
+  box-shadow: inset 0px 0px 10px black;
+  font-weight: bolder;
+  box-shadow: 1px 3px 3px rgb(22, 7, 7);
+  font-size: 22px;
+  line-height: 25px;
+  text-transform: uppercase;
+  background: linear-gradient(to top, #e65c00, #f9d423)
+}
+
+#score {
+  border-radius: 50px;
+  border: 2px solid white;
+  position: absolute;
+  margin-top: 2vh;
+  left: 2%;
+  display: none;
+  font-size: 20px;
+  letter-spacing: 5px;
+  opacity: 1;
+  box-shadow: inset 0px 0px 10px black;
+  font-weight: bolder;
+  box-shadow: 1px 3px 3px rgb(22, 7, 7);
+  font-size: 22px;
+  text-align: center;
+  line-height: 25px;
+  text-transform: uppercase;
+  background: linear-gradient(to top, #e65c00, #f9d423)
+  /*background: linear-gradient(to bottom, #77a1d3, #79cbca, #e684ae); */
+}
+
+#wish{
+  position: absolute;
+  margin-top: 10vh;
+  margin-left: 30%;
+  display: none;
+  width: 250px;
+  height: 125px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  /*background: linear-gradient(90deg, #000, #fff, #000); */
+  background:linear-gradient(90deg, #1488cc, #2b32b2, #753a88,#000); 
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 4s linear infinite; 
+  -webkit-text-fill-color: rgba(240, 3, 3, 0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+#shooting{
+  position: absolute;
+  margin-top: 7vh;
+  text-align: center;
+  display: none;
+  width: 100%;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  overflow: hidden;
+  /*background: linear-gradient(90deg, #000, #fff, #000); */
+  background:linear-gradient(90deg, #fc0015, #080404, #f00808,#000); 
+  background-repeat: no-repeat;
+   animation: example 1s linear infinite; 
+  -webkit-text-fill-color: rgba(240, 30, 30, 0);;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-style: italic;
+  font-weight: bolder;  
+}
+
+#theBest{
+ position: absolute;
+ margin-top: 32%;
+ display: none;
+ letter-spacing: 5px;
+ opacity: 1;
+ font-weight: bolder;
+/* 
+ background: linear-gradient(to top, #cf2114, #7bf30b);
+ left: 22%;*/
+ font-size: 27px;
+ text-align: center;
+ line-height: 45px;
+ text-transform: uppercase;
+ width: 100%;
+ box-shadow: inset 0px 0px 10px black;
+ box-shadow: 1px -3px 3px rgb(22, 7, 7);
+ color: rgb(255, 166, 0);
+ text-shadow: 5px 5px 4px #000000;
+ font-style: italic;
+
+}
+
+#yourScore{
+ position: absolute;
+ margin-top: 48%;
+ display: none;
+ font-size: 25px;
+ letter-spacing: 5px;
+ opacity: 1;
+ box-shadow: inset 0px 0px 10px black;
+ /*  background: linear-gradient(to top, #e65c00, #e60000); 
+ */
+ font-weight: bolder;
+ text-align: center;
+ line-height: 45px;
+ text-transform: uppercase;
+ box-shadow: 1px 3px 3px rgb(22, 7, 7);
+ width: 100%;
+ color: white;
+ text-shadow: 5px 5px 4px #000000;
+}
+
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+@keyframes example {
+  0%   {opacity:0%}
+  25%  {opacity:25%}
+  50%  {opacity:75%}
+  100% {opacity:100%} 
+}
+
+#vnaxot{
+  background-color: red;
+}
+/*მენიუ*/
+
+
+#final {
+  display: none;
+}
+#bestmenu {
+  display: none;
+  background-color: green;
+}
+
+#optionsMenu {
+  display: none;
+}
+/*სროლა*/
+
+#mine {
+  top: 30%;
+  left: 10%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none; 
+  /* none   background-image: url("../img/download.png");   
+   background: linear-gradient(to top, #e65c00, #f9d423);      
+  box-shadow: 2px 2px 3px rgb(22, 7, 7);
+  box-shadow: inset 0px 0px 10px black;
+  */
+  opacity: 1;
+  background: linear-gradient(to top, #e65c00, #f97923); 
+  box-shadow: inset 0px 0px 10px black;
+  box-shadow: 1px 3px 3px rgb(22, 7, 7);
+ 
+  
+}
+#hello {
+  position: absolute;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  transform: translateX(-50%);
+}
+
+/*ღილაკები */
+
+button {
+  width: 180px;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid white;
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: bolder;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 1px 1px 5px rgb(255, 12, 12);
+  color:  hsl(0, 93%, 38%); 
+}
+
+/*option */
+#sound {
+  top: 30%;
+  left: 4%;
+  background-color: lightgray;
+  width: 150px;
+  background-image: url("../img/sound.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+#background1 {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  top: 42%;
+  background-image: url("../img/backcolor.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center; 
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: bolder;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  border-radius: 50px;
+  border: 2px solid white;
+  justify-content: center;
+}
+
+/*პარაგრაფი */
+p {
+  z-index: 100;
+  color: white;
+  width: 100%;
+
+}
+
+#save {
+  top: 64%;
+  left: 15%;
+  background-color: orangered;
+  width: 300px;
+}
+#back {
+  top: 74%;
+  width: 100%;
+  background-image: url("../img/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  letter-spacing: 1.5rem;
+  color: white;
+}
+/*Best */
+
+#best {
+  animation: mymove 2s;
+  top: 52%;
+  left: 30%;
+  opacity: 1;  
+  background-image: url("../img/best.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: bolder;  
+}
+
+#clear {
+  top: 45%;
+  left: 30%;
+  background-color: yellow;
+  background-image: url("../img/clear.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#bestback {
+  top: 60%;
+  left: 30%;
+  background-color: red;
+  background-image: url("../img/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+li {
+  position: absolute;
+  top: 22%;
+  font-weight: bold; 
+  font-size: 60px;
+  list-style-type: none;
+  font-size: 80px;
+  color: rgb(255, 166, 0);
+  font-style: oblique;
+  width: 100%;
+  text-align: center;
+}
+
+
+h1 {
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  font-size: 45px;
+  letter-spacing: 4px;
+   /*შესაცვლელია ეს ფერი მწვანე მწვანეზეა :დდდ
+    
+       box-shadow: 1px 3px 3px rgb(22, 7, 7); 
+          box-shadow: inset 0px 0px 10px black;*/
+        color: black;
+        text-shadow: 3px 3px 2px rgb(255, 166, 0);  
+        text-align: center;
+           
+}
+
+
+/*ხმის მონიშვნა */
+
+#turnOFF {
+  top: 30%;
+  left: 75%;
+  width: 80px;
+  border: 0px;
+  font-weight: lighter;
+  color: black;
+}
+#turnOn {
+  top: 30%;
+  width: 80px;
+  left: 50%;
+  border: 0px;
+  font-weight: lighter;
+  color: black;
+}
+
+/*ბოლო */
+#rest {
+  background-color: yellow;
+  top: 60%;
+  left: 30%;
+  background-image: url("../img/start.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#continiue{
+  background-image:url("../img/background.jpg"); 
+  color: rgb(255, 166, 0);
+  top: 62%;
+  left: 30%;
+
+}
+
+#quit {
+  background-color: green;
+  top: 74%;
+  left: 30%;
+  background-image: url("../img/exit.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*მენიუ */
+#start {
+ animation: mymove 2s;
+  top: 30%;
+  left: 30%;
+  opacity: 1;
+  background-image: url("../img/start.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#exit {
+  background-image: url("../img/exit.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  top: 63%;
+  left: 30%;
+  opacity: 1;
+  animation: outmove 2s;
+}
+#option {
+  background-image: url("../img/option.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: outmove 2s;
+  top: 41%;
+  left: 30%;
+  opacity: 1;
+  font-weight: bolder;
+}
+
+/*ფერები */
+#red,
+#green,
+#lightcoral,
+#maroon,
+#lighgray {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}
+
+#red { 
+  background-color: #42275a; 
+  top: 60%;
+  left: 5%;
+  text-decoration: underline;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 10px black;
+}
+
+#green {
+  background-color: #56ab2f;
+  top: 60%;
+  left: 25%;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 10px red;
+}
+
+#lightcoral {
+  background-color: #f5574c;
+  top: 60%;
+  left: 45%;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 10px green;
+}
+#maroon {
+  top: 60%;
+  left: 65%;
+  background-color:#61045f;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 10px lightgray;
+}
+#lighgray {
+  background-color: #bdc3c7;
+  top: 60%;
+  left: 85%;
+  border-radius: 50px;
+}
+

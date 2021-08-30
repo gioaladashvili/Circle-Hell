@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover"> -->
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1,
+                maximum-scale=1, minimum-scale=1, width=device-width,
+                height=device-height, viewport-fit=cover" />
+
+    <title>Canvas</title>
+    <link rel="stylesheet" href="css/bevri burtebi srolit.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <script src="cordova.js"></script>
+</head>
+
+
+
+<body>
+
+    <!--  <div id="now"></div>  media query შესამოწმებლად mine ქანვასში უნდა ჩავსვა -->
+    <div id="shoot"></div>
+    <div id="score"></div>
+    <div id="wish"></div>
+    <div id="shooting"></div>
+    <div id="theBest"></div>
+    <div id="yourScore"></div>
+
+    <div id="mine"></div>
+
+    <div id="splash">
+        <h2 id="fade">CircleHELL</h2>
+        <h3 id="fade1">CircleHell</h3>
+        <h4 id="fade2">CircleHell</h4>
+        <h5 id="fade3">CircleHell</h4>
+            <div id="loading"></div>
+            <!--ბურთების მოძრაობა ინტროში  hide მოვაშორებ გამოჩნდება-->
+            <div id="hide">
+                <div id="introball1"></div>
+                <div id="introball2"></div>
+                <div id="introball3"></div>
+                <div id="introball4"></div>
+                <div id="introball5"></div>
+                <div id="introball6"></div>
+                <div id="introball7"></div>
+                <div id="introball8"></div>
+            </div>
+
+    </div>
+
+
+    <canvas>
+
+    </canvas>
+
+    <div id="game">
+        <div id="main">
+            <button id="start">Play</button>
+            <button id="option">Option</button>
+            <button id="exit">Exit</button>
+            <button id="best">Best</button>
+        </div>
+
+        <div id="bestmenu">
+            <ul>
+                <h1>Your Best!!!</h1>
+                <li id="list">1</li>
+            </ul>
+            <button id="clear">Clear</button>
+            <button id="bestback">Back</button>
+        </div>
+
+
+        <div id="optionsMenu">
+            <button id="sound">Sound</button>
+            <button id="back">Back</button>
+            <p id="background1">background-color</p>
+            <button id="turnOn">ON</button>
+            <button id="turnOFF">OFF</button>
+
+            <!--ფერები-->
+            <div id="red"></div>
+            <div id="green"></div>
+            <div id="lightcoral"></div>
+            <div id="maroon"></div>
+            <div id="lighgray"></div>
+        </div>
+
+        <div id="final">
+            <!-- <button id="continiue">continiue</button> -->
+            <button id="rest">Restart</button>
+            <button id="quit">Main</button>
+        </div>
+        <!--<div id="words"></div> -->
+
+        <!-- <img src="broke.png" id="hello"> -->
+    </div>
+    <script src="js/bevri burtebi srolit.js"></script>
+</body>
+
+</html>

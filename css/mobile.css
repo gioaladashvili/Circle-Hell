@@ -1,0 +1,400 @@
+
+/*responsiv */
+@media only screen and (max-width: 359px) { 
+    #now{
+      width: 100px;
+        height: 50px;
+        background-color: red;
+    } 
+    #shoot {    
+      font-size: 17px;
+      letter-spacing: 0.3ch;   
+     }
+  
+     #score {
+       font-size: 17px;
+       letter-spacing: 0.5vh;
+     }
+    #clear {
+       left:20%;
+    };
+  
+    #sound{
+        
+      left: 1%;
+      height: 70px;
+    }
+  
+    #turnOn{      
+      top: 30%;
+      width: 50px;
+      left: 55%;
+      height: 50px;
+    
+    }
+  
+    #turnOFF{
+      top: 30%;
+      width: 70px;
+      left: 75%;
+      height: 50px;
+    }
+    #background1{
+     font-size: 18px;
+        }
+   
+    #start{
+      left: 20%;
+      top: 27%;
+    }
+    #option{
+      left: 20%;
+    }
+    #best{
+      left: 20%;
+      top: 55%;
+    }
+    #exit{
+      left: 20%;
+      top:68%
+    }
+    #bestback{
+      left: 20%;
+    }
+    /*
+    h1{
+      top: 10%;     
+      left: 12%;
+    } 
+    #list{
+      left: 35%;
+      top: 25%;
+    }*/
+}
+
+
+
+  /* ესაა თათას ტელესი */
+  @media only screen and (min-width: 360px) {
+    body {
+      font-size: 17px;
+    }
+    
+button {
+  width: 180px;
+  height: 60px;
+  border: 5px solid white;
+
+}
+
+
+#yourScore{
+  font-size: 17px;
+}
+
+#theBest{
+  font-size: 17px;
+} 
+
+#continiue{
+  font-size: 17px;
+}
+ 
+
+    #now{
+        width: 100px;
+        height: 50px;
+        background-color: black;
+    } 
+
+    #shoot {    
+        font-size: 17px;
+        letter-spacing: 0.2ch;   
+       }
+    
+       #score {
+         font-size: 17px;
+         letter-spacing: 0.5vh;
+       }
+
+
+     #start {
+      left: 25%;
+         }
+    #option {
+      left: 25%;
+      margin-top: 10px;
+    }
+    #best {
+      left: 25%;
+      margin-top: 25px;
+    }
+    #exit {
+      left: 25%;
+      margin-top: 35px;
+    }
+     
+    #list {
+     
+      top: 25%;
+    } 
+   
+    h1 {
+    font-size: 30px;
+      top:10%;
+     
+    } 
+    #clear {
+      top: 55%;
+      left: 25%;
+     
+    }
+    #bestback {
+      top: 70%;
+      left: 25%;
+
+        }
+
+
+    #background1{
+        font-size: 19px;
+      
+      }
+}
+  
+  /* აქ ცვლილებებია შესატანი */
+
+  @media only screen and (min-width: 420px) {
+    #now{
+        width: 100px;
+        height: 50px;
+        background-color: yellow;
+    } 
+    #background1{
+      font-size: 30px;
+    }
+
+    button {     
+      width: 180px;
+      height: 70px;      
+      border: 2px solid white;
+      position: absolute;
+      letter-spacing: 5px;
+      font-size: 25px;
+      font-weight: bolder;
+      font-style: oblique;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      box-shadow: 1px 1px 5px rgb(255, 12, 12);  
+    }
+
+  
+  }
+  
+
+
+
+  @media only screen and (min-width: 768px) {
+    #now{
+        width: 100px;
+        height: 50px;
+        background-color: orange;
+    } 
+    #background1 {
+      font-size: 35px;
+     }
+
+    #wish{
+      left:10%;
+    }
+
+    #start {
+      background-color: orange;
+    }
+    
+    button {
+      width: 280px;
+      height: 100px;
+      border-radius: 50px;
+      border: 5px solid black;
+      position: absolute;
+      letter-spacing: 7px;
+      font-size: 33px;
+    }
+  
+    #start {     
+      left: 32%;
+   
+    }
+    #option {      
+      left: 32%;
+      margin-top: 10px;
+    }
+    #best {
+      left: 32%;
+      margin-top: 25px;
+    }
+    #exit {
+      left: 32%;
+      margin-top: 35px;
+    }
+    #sound {
+      width: 300px;
+      left: 5%;
+    }
+   
+    #turnOFF {
+      top: 30%;
+      left: 75%;
+      width: 150px;
+    }
+    #turnOn {
+      top: 30%;
+      width: 150px;
+      left: 50%;
+    }
+ 
+  
+    #red,
+    #green,
+    #lightcoral,
+    #maroon,
+    #lighgray {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+    }
+    /*
+    #list {
+      left: 38%;
+      font-size: 120px;
+    }
+  
+    h1 {
+      left: 28%;
+      font-size: 80px;
+    } */
+    #clear {
+      margin-top: 30px;      
+      left: 38%;
+    }
+
+ #bestback{
+   top: 75%;
+   left: 38%;
+ }
+  }
+
+
+  
+  @media only screen and (min-width: 1024px) {
+
+    #now{
+        width: 100px;
+        height: 50px;
+        background-color: green;
+    } 
+  
+    #shoot{
+      font-size: 30px;
+      letter-spacing: 0.7vh;  
+    }
+  
+    #score {
+      font-size: 30px;
+      letter-spacing: 0.7vh;
+    }
+    #start {
+      background-color: rgb(105, 88, 88);
+    }
+    #help {
+      width: 330px;
+      height: 30px;
+      background-color: red;
+      position: absolute;
+      margin-top: 97.3vh;
+      margin-left: 35.8%;  
+      font-size: 15px;
+    }
+
+    button {
+      width: 380px;
+      height: 130px;
+      border-radius: 50px;
+      border: 5px solid black;
+      position: absolute;
+      letter-spacing: 7px;
+      font-size: 40px;
+    }
+    #background1 {
+     font-size: 35px;
+    }
+    #back {
+    
+      letter-spacing: 45px;
+    }
+    #red,
+    #green,
+    #lightcoral,
+    #maroon,
+    #lighgray {
+      width: 130px;
+      height: 130px;
+      position: absolute;
+    }
+  
+    #sound {
+      width: 400px;
+    }
+  }
+  
+
+   
+  @media(max-height:500px){
+    button {
+      width: 180px;
+   
+    }
+    #sound{
+       top:15%
+    }
+    #turnOn{
+      top:15%;
+    }
+    #turnOFF{
+       top:15%;
+    }
+
+      #background {
+         top: 33%;
+      }
+
+      #back {
+        top: 80%;
+      }
+
+  }
+
+
+  @media(min-height:500px){
+    button {   
+      height: 60px;  
+    }
+    #sound{
+       top:15%
+    }
+    #turnOn{
+      top:15%;
+    }
+    #turnOFF{
+       top:15%;
+    }
+
+      #background {
+         top: 33%;
+      }
+
+      #back {
+        top: 80%;
+      }
+
+  }
